@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:id="@+id/linearlayouttop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:background="@color/lightblue"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="cursive"
+                android:text="Writer."
+                android:textColor="@color/white"
+                android:textSize="60sp" />
+
+
+            <Button
+                android:id="@+id/createPdf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.5"
+                android:backgroundTint="@color/darkskyblue"
+                android:gravity="center_horizontal"
+                android:text="Save pdf"
+                android:textColor="@color/white" />
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightblue"
+            android:fontFamily="sans-serif"
+            android:text="Preview ( Paper Size - A-4 )"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+
+
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:layout_gravity="center_horizontal"
+            >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/constrain1"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:orientation="vertical"
+
+       >
+
+
+        <EditText
+            android:id="@+id/display"
+            android:layout_width="787.2px"
+            android:layout_height="1122.6666667px"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ruled1"
+            android:gravity="top|left"
+            android:hint="Start Typing here....."
+            android:isScrollContainer="true"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="horizontal"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="21.250356px"
+            app:layout_constraintDimensionRatio="1:1.414"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1"
+            />
+
+
+        <!--        <EditText-->
+<!--            android:id="@+id/display1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:background="@drawable/ruledpage"-->
+<!--            android:gravity="top|left"-->
+<!--            android:hint="Start Typing here....."-->
+<!--            android:importantForAutofill="no"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="26px"-->
+<!--            app:layout_constraintDimensionRatio="1:1.414"-->
+
+<!--            app:layout_constraintVertical_weight="1"-->
+<!--            android:letterSpacing="1.2"-->
+<!--            android:lineSpacingExtra = "40px"-->
+
+<!--            tools:ignore="MissingConstraints" />-->
+
+
+
+    </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:paddingBottom="200dp"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create a new page"
+                android:id="@+id/addnewpage"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearlayoutbackground"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/lightblue"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/bottomnavigation"
+        android:visibility="gone"
+        >
+
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="6dp"
+            android:src="@drawable/ruledpage" />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="6dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="6dp"
+            android:src="@drawable/ruledpage" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightblue"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/bottomnavigation"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            app:cardCornerRadius="6dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+              >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.3"
+                    android:paddingLeft="6dp"
+                    android:text="A"
+                    android:textColor="@color/darkskyblue"/>
+
+                <SeekBar
+                    android:id="@+id/fontsize"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:padding="10dp"
+                    android:progressTint="@color/darkskyblue"
+                    android:thumbTint="@color/lightblue"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:paddingLeft="6dp"
+                    android:text="A"
+                    android:textSize="20sp"
+                    android:textColor="@color/darkskyblue"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+             >
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:elevation="12dp"
+                app:cardCornerRadius="10dp"
+                android:layout_weight="1"
+                android:paddingLeft="6dp"
+                app:cardBackgroundColor="@color/white">
+
+
+                <SeekBar
+                    android:id="@+id/letterspacing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:progressTint="@color/darkskyblue"
+                    android:thumbTint="@color/lightblue"
+
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Align vertically" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:progressTint="@color/darkskyblue"
+            android:thumbTint="@color/darkskyblue"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Align Horizontally" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:progressTint="@color/darkskyblue"
+                android:thumbTint="@color/darkskyblue"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:orientation="vertical"
+    android:id="@+id/linearlayout3"
+    app:layout_constraintBottom_toTopOf="@id/bottomnavigation">
+
+    <HorizontalScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:measureAllChildren="false"
+        android:scrollbars="none"
+       >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available fonts "
+                android:textSize="22sp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/Blue"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="font color:"
+                android:textSize="22sp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/darkskyblue"
+                />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/red"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/Red"
+                android:paddingLeft="20dp"
+                />
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/red"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="10dp"-->
+<!--                android:text="Red"-->
+<!--                android:textColor="@color/Red"-->
+<!--                android:textSize="30dp" />-->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/blue"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/Blue"
+               android:layout_marginLeft="10dp"
+                />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/lightblue"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/lightblue"
+                android:layout_marginLeft="10dp"
+                />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/pen"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:backgroundTint="#16264c"
+                android:layout_marginLeft="10dp"
+                />
+
+
+            <!--            <TextView-->
+<!--                android:id="@+id/blue"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="10dp"-->
+<!--                android:text="Blue"-->
+<!--                android:textColor="@color/Blue"-->
+<!--                android:textSize="30dp" />-->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/black"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+
+<!--            <TextView-->
+<!--                android:id="@+id/black"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="10dp"-->
+<!--                android:text="Black"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="30sp" />-->
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/green"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/green"
+                android:layout_marginLeft="10dp"
+                />
+
+<!--            <TextView-->
+<!--                android:id="@+id/gray"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="10dp"-->
+<!--                android:text="Gray"-->
+<!--                android:textColor="@color/Gray"-->
+<!--                android:textSize="30sp" />-->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/grey"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/Gray"
+                android:layout_marginLeft="10dp"
+                />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/snow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/snow"
+                android:layout_marginLeft="10dp"
+                />
+<!--            <TextView-->
+<!--                android:id="@+id/snow"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="10dp"-->
+<!--                android:text="snow"-->
+<!--                android:textColor="@color/snow"-->
+<!--                android:textSize="30sp" />-->
+        </LinearLayout>
+
+
+
+
+
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/linearlayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:measureAllChildren="false"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABC"
+                android:id="@+id/handwritting1"
+                android:fontFamily="@font/alex1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABC"
+                android:id="@+id/handwritting2"
+                android:fontFamily="@font/alex1"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABC"
+                android:id="@+id/handwritting3"
+                android:fontFamily="@font/delta1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABC"
+                android:id="@+id/handwritting4"
+                android:fontFamily="@font/dorinius1"/>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABC"
+                android:id="@+id/handwritting5"
+                android:fontFamily="@font/estoutic1"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABC"
+                android:id="@+id/handwritting6"
+                android:fontFamily="@font/forichok1"
+                />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABC"
+                android:id="@+id/handwritting7"
+                android:fontFamily="@font/hindi1"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABC"
+                android:id="@+id/handwritting8"
+                android:fontFamily="@font/laconical1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABC"
+                android:id="@+id/handwritting9"
+                android:fontFamily="@font/woipot1"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_weight="1"
+        tools:layout_editor_absoluteX="1dp">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        >
+
+
+    <Button
+            android:id="@+id/bottomnavigationimg1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_baseline_insert_drive_file_24"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        >
+
+
+    <Button
+            android:id="@+id/bottomnavigationimg2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+        android:background="@drawable/ic_baseline_format_align_center_nothover" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+
+        >
+
+            <Button
+                android:id="@+id/bottomnavigationimg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_baseline_text_nothover"
+                app:backgroundTint="@color/black"
+              />
+    </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

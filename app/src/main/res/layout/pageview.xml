@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_gravity="center_horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearpage"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+
+            >
+
+
+            <EditText
+                android:id="@+id/write"
+                android:layout_width="787.2px"
+                android:layout_height="1122.6666667px"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ruled1"
+                android:gravity="top|left"
+                android:hint="Start Typing here....."
+                android:isScrollContainer="true"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="horizontal"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="21.250356px"
+               />
+
+
+            <!--        <EditText-->
+            <!--            android:id="@+id/display1"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="0dp"-->
+            <!--            android:background="@drawable/ruledpage"-->
+            <!--            android:gravity="top|left"-->
+            <!--            android:hint="Start Typing here....."-->
+            <!--            android:importantForAutofill="no"-->
+            <!--            android:textColor="@color/black"-->
+            <!--            android:textSize="26px"-->
+            <!--            app:layout_constraintDimensionRatio="1:1.414"-->
+
+            <!--            app:layout_constraintVertical_weight="1"-->
+            <!--            android:letterSpacing="1.2"-->
+            <!--            android:lineSpacingExtra = "40px"-->
+
+            <!--            tools:ignore="MissingConstraints" />-->
+
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
