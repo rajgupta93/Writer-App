@@ -601,7 +601,7 @@ import static com.itextpdf.kernel.pdf.PdfName.BaseFont;
                     Log.e("url", String.valueOf(fontURL));
                     Log.e("font path url", String.valueOf(font_path));
 
-                    InputStream fontStream = fontURL.openStream();
+//                    InputStream fontStream = fontURL.openStream();
 
 //                    try (InputStream is = fontURL.openStream()) {
 //                        byte[] bytes = StreamUtil.inputStreamToArray(is);
@@ -658,18 +658,18 @@ import static com.itextpdf.kernel.pdf.PdfName.BaseFont;
 
 
                
-//
-//                        for (int i = 1; i <= index; i++) {
-//                            pdfDocument.addNewPage();
-//                            View et2= constrain.getChildAt(constrain.getChildCount());
-//                            EditText myEditText1 = et2.findViewById(R.id.write);
-//                            Log.e("edit", " " + myEditText1.getText());
-//                            s = String.valueOf(myEditText1.getText());
-//                            Paragraph para = new Paragraph(s).setFontSize(16);
-//                            document.add(para);
-//                        }
 
+                        for (int i = 1; i <= index; i++) {
+                            pdfDocument.addNewPage();
+                            View et2= constrain.getChildAt(constrain.getChildCount());
+                            EditText myEditText1 = et2.findViewById(R.id.write);
+                            Log.e("edit", " " + myEditText1.getText());
+                            s = String.valueOf(myEditText1.getText());
+                            Paragraph para = new Paragraph(s).setFontSize(16);
+                            document.add(para);
+                        }
 
+                    document.add(new Paragraph("hello"));
 
                     String allEditText = "";
                     for (int i = 0; i<rowViewList.size(); i++){
